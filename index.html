@@ -12,7 +12,7 @@
 <meta content="Scoutwave ~ find new music" property="og:description">
 <meta content="Scoutwave ~ find new music." name="description">
 <meta content="http://www.thisismyjam.com/includes/image/jamonit.png" property="og:image">
-<title>Home | This Is My Jam</title>
+<title>Scout ~ Music</title>
 <link href="/includes/image/favicon.ico" type="image/x-icon" rel="icon">
 <link href="/includes/image/favicon.png" type="image/png" rel="icon">
 <link href="/includes/image/apple-touch-icon.png" rel="apple-touch-icon">
@@ -18172,7 +18172,7 @@ if(c instanceof b){a.push(c.insertJamByUsername(d))}}return $.when.apply($,a)};t
 }var a=this;this.createPromise.then(function(){$.ajax({url:"/playlist/session",data:{action:"increment",what:b,id:a.id},type:"post",dataType:"json"})})};PlayerView=function(){EventEmitter.apply(this);this.$playerBar=$("#player-bar");
 this.$playerBarButton=$("#playPause");this.$footer=$("footer");this.volumeControl=new VolumeControl();this.volumeControl.appendTo($("#volumeControlWrapper"));this.volumeControl.set($("#volumeControlWrapper").data("volume"));
 this.bind();var a=this;if($("#volumeControlWrapper").data("muted")){a.volumeControl.mute();a.volumeControl.set(0)}};PlayerView.prototype=extend(EventEmitter);PlayerView.prototype.setTitle=function(b){var d=document.title,a=function(){var e=["\u25B6","\u275A\u275A"];
-for(var f=0;e.length>f;f++){if(d.indexOf(e[f])!==-1){return e[f]}}return false};if(a()){var c=a();d=d.substring(c.length+1)}if(!d){d="Home | This Is My Jam"}d=b+" "+d;document.title=$.trim(d)};PlayerView.prototype.getCurrentProfileJamvatar$=function(){var b=window.player.current();
+for(var f=0;e.length>f;f++){if(d.indexOf(e[f])!==-1){return e[f]}}return false};if(a()){var c=a();d=d.substring(c.length+1)}if(!d){d="Scout ~ Music"}d=b+" "+d;document.title=$.trim(d)};PlayerView.prototype.getCurrentProfileJamvatar$=function(){var b=window.player.current();
 if(!b){return null}var a=$(sprintf(".jamvatar-%s:has([data-playlist=profile])",b.id));if(a.length){return a}return null};PlayerView.prototype.getCurrentJamvatar$=function(){var b=window.player.current();
 if(b){if(this.isOnCurrentlyPlayingProfilePage()){return this.getCurrentProfileJamvatar$()}var c=window.player.playlist;var a=$(sprintf(".jamvatar-%s:has([data-playlist=%s])",b.id,c.name));if(a.length){return a
 }}return null};PlayerView.prototype.getCurrentPlayButton$=function(){var a=window.player.current();if(a){if(this.isOnProfilePage()){return $(sprintf("[data-id=%s]",a.id))}else{var b=window.player.playlist;
